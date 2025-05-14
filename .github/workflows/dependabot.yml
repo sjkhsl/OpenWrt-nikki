@@ -248,7 +248,7 @@ jobs:
           ref: main
           path: OpenWrt-nikki
           fetch-depth: 0
-          token: ${{ secrets.TOKEN }}
+          token: ${{ github.token }}
           
       - id: git_config
         name: 配置 Git
@@ -354,4 +354,4 @@ jobs:
           # 直接推送到main分支
           git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
